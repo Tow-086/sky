@@ -45,4 +45,6 @@ public interface OrderService {
     void delivery(Long id);
 
     void complete(Long id);
+    // 订单催单
+    void reminder(Long id);
 }
