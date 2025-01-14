@@ -12,6 +12,7 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface DishMapper {
@@ -49,4 +50,6 @@ public interface DishMapper {
     List<Dish> getBySetmealId(Long id);
     @Update("update dish set status = #{status} where id = #{id}")
     void startOrStop(Integer status, Long id);
+
+    Integer countByMap(Map map);
 }
